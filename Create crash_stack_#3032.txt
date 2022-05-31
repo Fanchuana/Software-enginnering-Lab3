@@ -1,0 +1,56 @@
+## Issue explanation (write below this line)
+
+
+
+## Exception
+* __App Name:__ Amaze 文件管理器
+* __Package:__ com.amaze.filemanager
+* __Version:__ 3.6.7
+* __User Action:__ UI Error
+* __Request:__ Application crash
+* __OS:__ Linux Android 12 - 31
+* __Device:__ lmi
+* __Model:__ Redmi K30 Pro
+* __Product:__ lmi
+<details><summary><b>Crash log </b></summary><p>
+
+```
+java.lang.NullPointerException: Attempt to invoke virtual method 'android.net.Uri android.content.Intent.getData()' on a null object reference
+ at com.amaze.filemanager.ui.fragments.MainFragment.lambda$new$0(MainFragment.java:175)
+ at com.amaze.filemanager.ui.fragments.MainFragment.lambda$new$0$MainFragment(Unknown Source:0)
+ at com.amaze.filemanager.ui.fragments.-$$Lambda$MainFragment$gtX1_vQ8WbpPcpwHOyy_ZLTwZIM.onActivityResult(Unknown Source:4)
+ at androidx.activity.result.ActivityResultRegistry$1.onStateChanged(ActivityResultRegistry.java:145)
+ at androidx.lifecycle.LifecycleRegistry$ObserverWithState.dispatchEvent(LifecycleRegistry.java:354)
+ at androidx.lifecycle.LifecycleRegistry.forwardPass(LifecycleRegistry.java:265)
+ at androidx.lifecycle.LifecycleRegistry.sync(LifecycleRegistry.java:307)
+ at androidx.lifecycle.LifecycleRegistry.moveToState(LifecycleRegistry.java:148)
+ at androidx.lifecycle.LifecycleRegistry.handleLifecycleEvent(LifecycleRegistry.java:134)
+ at androidx.fragment.app.Fragment.performStart(Fragment.java:3013)
+ at androidx.fragment.app.FragmentStateManager.start(FragmentStateManager.java:586)
+ at androidx.fragment.app.FragmentStateManager.moveToExpectedState(FragmentStateManager.java:300)
+ at androidx.fragment.app.FragmentStore.moveToExpectedState(FragmentStore.java:112)
+ at androidx.fragment.app.FragmentManager.moveToState(FragmentManager.java:1636)
+ at androidx.fragment.app.FragmentManager.dispatchStateChange(FragmentManager.java:3112)
+ at androidx.fragment.app.FragmentManager.dispatchStart(FragmentManager.java:3063)
+ at androidx.fragment.app.FragmentController.dispatchStart(FragmentController.java:262)
+ at androidx.fragment.app.FragmentActivity.onStart(FragmentActivity.java:482)
+ at androidx.appcompat.app.AppCompatActivity.onStart(AppCompatActivity.java:210)
+ at android.app.Instrumentation.callActivityOnStart(Instrumentation.java:1455)
+ at android.app.Activity.performStart(Activity.java:8273)
+ at android.app.ActivityThread.handleStartActivity(ActivityThread.java:3784)
+ at android.app.servertransaction.TransactionExecutor.performLifecycleSequence(TransactionExecutor.java:221)
+ at android.app.servertransaction.TransactionExecutor.cycleToPath(TransactionExecutor.java:201)
+ at android.app.servertransaction.TransactionExecutor.executeLifecycleState(TransactionExecutor.java:173)
+ at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:97)
+ at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2286)
+ at android.os.Handler.dispatchMessage(Handler.java:106)
+ at android.os.Looper.loopOnce(Looper.java:210)
+ at android.os.Looper.loop(Looper.java:299)
+ at android.app.ActivityThread.main(ActivityThread.java:8283)
+ at java.lang.reflect.Method.invoke(Native Method)
+ at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:556)
+ at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1045)
+
+```
+</details>
+<hr>
